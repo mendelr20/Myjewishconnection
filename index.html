@@ -6,17 +6,25 @@
   <title>My Jewish Connection</title>
   <!-- Tailwind (CDN) for quick deploy. For production, you can prebuild to reduce size. -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  const path = window.location.pathname.toLowerCase();
+
+  if (path === "/donate") {
+    // Send to Stripe checkout
+    window.location.href = "https://buy.stripe.com/dRmcN45Ntbwm8gv5Nj4Rq00";
+  } else if (path !== "/") {
+    // For ANY other forward slash or subpage, send back to homepage
+    window.location.href = "/";
+  }
+</script>
+
   <meta name="color-scheme" content="dark" />
   <style>
     /* Subtle card border on dark */
     .ring-1-white-10 { box-shadow: 0 0 0 1px rgba(255,255,255,0.1) inset; }
   </style>
 </head>
-<script>
-  if (window.location.pathname.toLowerCase() === "/donate") {
-    window.location.href = "https://buy.stripe.com/dRmcN45Ntbwm8gv5Nj4Rq00";
-  }
-</script>
+
 
 <body class="min-h-screen bg-neutral-950 text-neutral-100">
   <!-- NAV -->
