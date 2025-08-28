@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Jewish Connection</title>
+  <!-- Tailwind (CDN) for quick deploy. For production, you can prebuild to reduce size. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="dark" />
+  <style>
+    /* Subtle card border on dark */
+    .ring-1-white-10 { box-shadow: 0 0 0 1px rgba(255,255,255,0.1) inset; }
+  </style>
+</head>
+<body class="min-h-screen bg-neutral-950 text-neutral-100">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#top" class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-amber-500/90 text-neutral-900 font-extrabold">MJ</span>
+          <span class="text-lg font-semibold tracking-tight">My Jewish Connection</span>
+        </a>
+        <nav class="hidden sm:flex items-center gap-6 text-sm text-neutral-300">
+          <a href="#education" class="hover:text-white">Education</a>
+          <a href="#tradition" class="hover:text-white">Tradition</a>
+          <a href="#community" class="hover:text-white">Community</a>
+          <a href="#holidays" class="hover:text-white">Holidays</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+          <a href="/donate" class="ml-2 rounded-2xl bg-white/10 px-4 py-2 hover:bg-white/20">Donate</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0"
+         style="background: radial-gradient(ellipse at top, rgba(245,158,11,0.18), rgba(0,0,0,0));"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div class="grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+            Your Home for Jewish Learning, Tradition, and Community
+          </h1>
+          <p class="mt-4 text-neutral-300 text-lg">
+            My Jewish Connection provides welcoming classes, heartfelt holiday experiences, and
+            compassionate support — wherever you are on your Jewish journey.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="/donate" class="rounded-2xl bg-white/10 px-5 py-3 text-white hover:bg-white/20">Donate</a>
+          </div>
+          <div class="mt-6 flex items-center gap-3 text-sm text-neutral-400">
+            <span class="inline-block h-4 w-4 rounded-full bg-white/30"></span>
+            <span>Weekly classes • Year-round events • Individual support</span>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="relative">
+          <img src="/images/shabbat-candles.jpg" alt="Shabbat candles"
+               class="w-full rounded-3xl ring-1-white-10 shadow-2xl object-cover aspect-[4/3]" />
+          <p class="mt-3 text-xs text-neutral-500">(Place your photo at <code>/images/shabbat-candles.jpg</code>.)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE OFFER -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold">What We Offer</h2>
+      <p class="mt-2 text-neutral-300 max-w-2xl">
+        Programs designed to educate, uplift, and support — in classrooms, homes, workplaces, and the wider community.
+      </p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <!-- Education -->
+        <div class="rounded-3xl ring-1-white-10 bg-neutral-900/60 backdrop-blur p-6">
+          <div class="rounded-2xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 p-2 inline-flex mb-4 ring-1-white-10">📘</div>
+          <h3 id="education" class="text-xl font-semibold">Education</h3>
+          <p class="mt-1 text-sm text-neutral-300">From Hebrew lessons to deep-dive Torah study — accessible learning for every level.</p>
+          <ul class="mt-4 space-y-2 text-sm text-neutral-200">
+            <li>• Torah Classes</li>
+            <li>• Courses & Lectures</li>
+            <li>• Hebrew Lessons</li>
+            <li>• Bar & Bas Mitzvah Lessons</li>
+          </ul>
+        </div>
+
+        <!-- Tradition -->
+        <div class="rounded-3xl ring-1-white-10 bg-neutral-900/60 backdrop-blur p-6">
+          <div class="rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/10 p-2 inline-flex mb-4 ring-1-white-10">🕯️</div>
+          <h3 id="tradition" class="text-xl font-semibold">Tradition</h3>
+          <p class="mt-1 text-sm text-neutral-300">Bring timeless Jewish practice into your life, home, and workplace.</p>
+          <ul class="mt-4 space-y-2 text-sm text-neutral-200">
+            <li>• Friday Night Dinners</li>
+            <li>• Home/Office Mezuzah Consultations</li>
+            <li>• Life Cycle Officiating</li>
+          </ul>
+        </div>
+
+        <!-- Community -->
+        <div class="rounded-3xl ring-1-white-10 bg-neutral-900/60 backdrop-blur p-6">
+          <div class="rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/10 p-2 inline-flex mb-4 ring-1-white-10">🤝</div>
+          <h3 id="community" class="text-xl font-semibold">Community</h3>
+          <p class="mt-1 text-sm text-neutral-300">Warm, judgment-free community care at every stage of life.</p>
+          <ul class="mt-4 space-y-2 text-sm text-neutral-200">
+            <li>• Hospital/Home Visitation</li>
+            <li>• Senior Homes Visitations</li>
+            <li>• Prison Chaplaincy</li>
+            <li>• Life Cycle Guidance</li>
+            <li>• Family/Premarital Counseling</li>
+            <li>• Chevra Kadisha — Burial Society</li>
+          </ul>
+        </div>
+
+        <!-- Holidays -->
+        <div class="rounded-3xl ring-1-white-10 bg-neutral-900/60 backdrop-blur p-6">
+          <div class="rounded-2xl bg-gradient-to-br from-rose-500/20 to-pink-500/10 p-2 inline-flex mb-4 ring-1-white-10">📅</div>
+          <h3 id="holidays" class="text-xl font-semibold">Holidays</h3>
+          <p class="mt-1 text-sm text-neutral-300">Meaningful, hands-on holiday experiences all year long.</p>
+          <ul class="mt-4 space-y-2 text-sm text-neutral-200">
+            <li>• Shofar on the Go</li>
+            <li>• Sukkos</li>
+            <li>• Chanukah Menorah Lightings</li>
+            <li>• Purim Megillah Readings</li>
+            <li>• Passover Seder</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOLIDAY STRIP (informational only) -->
+  <section class="py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 ring-1-white-10 p-8 md:p-10">
+        <div class="grid gap-8 md:grid-cols-2 md:items-center">
+          <div>
+            <h3 class="text-2xl md:text-3xl font-bold">Holidays, Made Personal</h3>
+            <p class="mt-2 text-neutral-200">
+              From shofar on the go to public menorah lightings, we bring the joy and depth of each holiday to you —
+              at work, at home, and across the city.
+            </p>
+          </div>
+          <ul class="grid grid-cols-2 gap-3 text-sm">
+            <li class="rounded-xl bg-neutral-900/60 ring-1-white-10 px-4 py-3">Rosh Hashanah — Shofar on the Go</li>
+            <li class="rounded-xl bg-neutral-900/60 ring-1-white-10 px-4 py-3">Sukkos — Mobile & Community Sukkahs</li>
+            <li class="rounded-xl bg-neutral-900/60 ring-1-white-10 px-4 py-3">Chanukah — Menorah Lightings</li>
+            <li class="rounded-xl bg-neutral-900/60 ring-1-white-10 px-4 py-3">Purim — Megillah Readings</li>
+            <li class="rounded-xl bg-neutral-900/60 ring-1-white-10 px-4 py-3">Passover — Community Seder</li>
+            <li class="rounded-xl bg-neutral-900/60 ring-1-white-10 px-4 py-3">More Year-Round Programs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl ring-1-white-10 bg-neutral-900/80 p-6 md:p-8 text-white">
+        <h3 class="text-2xl font-semibold">Contact</h3>
+        <p class="mt-1 text-sm">Have a question or need assistance? Reach out and we’ll get back to you.</p>
+        <div class="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div class="space-y-1 text-sm">
+            <p>📞 (973) 896-1452</p>
+            <p>✉️ yisroel@myjewishconnection.com</p>
+            <p>📍 West Orange, NJ</p>
+          </div>
+          <a
+            class="h-11 rounded-2xl bg-amber-500 text-neutral-900 font-semibold px-5 py-3 hover:bg-amber-400"
+            href="mailto:yisroel@myjewishconnection.com?subject=Inquiry%20from%20My%20Jewish%20Connection%20website&body=Hello%2C%0A%0AI%27d%20like%20to%20connect%20about..."
+            >Contact Us Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-amber-500/90 text-neutral-900 font-extrabold">MJ</span>
+            <span class="font-semibold">My Jewish Connection</span>
+          </div>
+          <p class="mt-3 text-sm text-neutral-400 max-w-sm">
+            A welcoming hub for Jewish learning, tradition, and community care across West Orange, NJ and beyond.
+          </p>
+        </div>
+        <div class="text-sm">
+          <h4 class="font-semibold">Get Involved</h4>
+          <ul class="mt-2 space-y-1 text-neutral-300">
+            <li><a class="hover:text-white" href="/donate">Donate</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-neutral-500">© <span id="yr"></span> My Jewish Connection. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+git
